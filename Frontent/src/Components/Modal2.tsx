@@ -2,10 +2,14 @@ import React, { useRef, useState } from "react";
 import modalClose from "../assets/icon-close-modal.svg";
 import Modal3 from "./Modal3";
 
-const Modal2 = ({ setActive }) => {
+interface Modal2Props {
+  setActive: (active: boolean) => void;
+}
+
+const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
   const [selected, setSelected] = useState("");
-  const inputRef = useRef(null);
-  const [num, setNum] = useState();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [num, setNum] = useState("");
   const [open, setOpen] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
 
@@ -13,9 +17,6 @@ const Modal2 = ({ setActive }) => {
     selected === "option2" ? 25 : selected === "option3" ? 75 : 0;
 
   const handleClick = () => {
-    const minValue =
-      selected === "option2" ? 25 : selected === "option3" ? 75 : 0;
-
     if (!num || num === "") {
       alert("Please enter a value");
       return;
@@ -26,13 +27,12 @@ const Modal2 = ({ setActive }) => {
       return;
     }
 
-    // If everything is fine
     setOpen(true);
     window.scrollTo({ top: 100, behavior: "smooth" });
   };
 
   const handlePClick = () => {
-    inputRef.current.focus();
+    inputRef.current?.focus();
   };
 
   const classes =
@@ -51,7 +51,7 @@ const Modal2 = ({ setActive }) => {
       : "border border-gray-300 rounded my-4";
 
   return (
-    <div className="">
+    <div>
       {show && (
         <div>
           <div className="fixed inset-0 bg-black/60 z-40"></div>
@@ -60,9 +60,7 @@ const Modal2 = ({ setActive }) => {
               src={modalClose}
               className="absolute top-0 right-0 cursor-pointer p-4"
               alt=""
-              onClick={() => {
-                setActive(false);
-              }}
+              onClick={() => setActive(false)}
             />
             <h3 className="font-bold text-lg md:text-xl pb-2">
               Back this project
@@ -74,7 +72,6 @@ const Modal2 = ({ setActive }) => {
             <div className="card">
               <div className={classes3}>
                 <div className="card-item flex gap-3 items-start p-4">
-                  {/* <label className=""> */}
                   <div>
                     <input
                       type="radio"
@@ -95,7 +92,6 @@ const Modal2 = ({ setActive }) => {
                     />
                   </div>
 
-                  {/* </label> */}
                   <div>
                     <div className="flex justify-between">
                       <label htmlFor="option1">
@@ -162,9 +158,9 @@ const Modal2 = ({ setActive }) => {
                 )}
               </div>
 
+              {/* Option 2 */}
               <div className={classes}>
                 <div className="card-item  flex gap-3 p-4">
-                  {/* <label className=""> */}
                   <div>
                     <input
                       type="radio"
@@ -185,7 +181,6 @@ const Modal2 = ({ setActive }) => {
                     />
                   </div>
 
-                  {/* </label> */}
                   <div>
                     <div className="flex  justify-between ">
                       <div>
@@ -215,10 +210,6 @@ const Modal2 = ({ setActive }) => {
                         believe in our project. As a backer, you will be signed
                         to receive product updates via email.
                       </p>
-                      {/* <div className="flex flex-row items-center gap-2 sm:hidden">
-                            <h3 className="font-bold text-lg">101</h3>
-                            <p className="font-bold text-xs text-gray-400">left</p>
-                        </div> */}
                     </div>
                     <div className="flex flex-row items-center gap-2 sm:hidden">
                       <h3 className="font-bold text-lg">101</h3>
@@ -272,9 +263,9 @@ const Modal2 = ({ setActive }) => {
                 )}
               </div>
 
+              {/* Option 3 */}
               <div className={classes2}>
                 <div className="card-item  flex gap-3 items-start p-4">
-                  {/* <label className=""> */}
                   <div>
                     <input
                       type="radio"
@@ -295,7 +286,6 @@ const Modal2 = ({ setActive }) => {
                     />
                   </div>
 
-                  {/* </label> */}
                   <div>
                     <div className="flex justify-between">
                       <label htmlFor="option3" className="flex gap-2 flex-wrap">
@@ -322,10 +312,6 @@ const Modal2 = ({ setActive }) => {
                         believe in our project. As a backer, you will be signed
                         to receive product updates via email.
                       </p>
-                      {/* <div className="flex flex-row items-center gap-2 sm:hidden">
-                            <h3 className="font-bold text-lg">64</h3>
-                            <p className="font-bold text-xs text-gray-400">left</p>
-                        </div> */}
                     </div>
                     <div className="flex flex-row items-center gap-2 sm:hidden">
                       <h3 className="font-bold text-lg">64</h3>
@@ -379,13 +365,9 @@ const Modal2 = ({ setActive }) => {
                 )}
               </div>
 
+              {/* Option 4 (disabled) */}
               <div className="p-4 border border-gray-300 rounded my-4">
-                <div
-                  className="card-item flex gap-3 items-start
-                border-gray-200 opacity-50 cursor-not-allowed
-                "
-                >
-                  {/* <label className=""> */}
+                <div className="card-item flex gap-3 items-start border-gray-200 opacity-50 cursor-not-allowed">
                   <div>
                     <input
                       type="radio"
@@ -406,7 +388,6 @@ const Modal2 = ({ setActive }) => {
                     />
                   </div>
 
-                  {/* </label> */}
                   <div>
                     <div className="flex justify-between ">
                       <label htmlFor="option4" className="flex gap-2 flex-wrap">
@@ -427,21 +408,11 @@ const Modal2 = ({ setActive }) => {
                         </p>
                       </div>
                     </div>
-                    <div>
-                      <p className="py-3 text-sm text-gray-500 2xl:text-xl">
-                        Choose to support us without a reward if you simply
-                        believe in our project. As a backer, you will be signed
-                        to receive product updates via email.
-                      </p>
-                      {/* <div className="flex flex-row items-center gap-2 sm:hidden">
-                            <h3 className="font-bold text-lg">0</h3>
-                            <p className="font-bold text-xs text-gray-400">left</p>
-                        </div> */}
-                    </div>
-                    <div className="flex flex-row items-center gap-2 sm:hidden">
-                      <h3 className="font-bold text-lg">0</h3>
-                      <p className="font-bold text-xs text-gray-400">left</p>
-                    </div>
+                    <p className="py-3 text-sm text-gray-500 2xl:text-xl">
+                      Choose to support us without a reward if you simply
+                      believe in our project. As a backer, you will be signed
+                      to receive product updates via email.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -450,7 +421,7 @@ const Modal2 = ({ setActive }) => {
         </div>
       )}
 
-      {open && <Modal3 setOpen={setOpen} setShow={setShow}  />}
+      {open && <Modal3 setOpen={setOpen} setShow={setShow} />}
     </div>
   );
 };

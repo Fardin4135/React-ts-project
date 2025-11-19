@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "../Components/Modal.css";
 import masterCraft from "../assets/logo-mastercraft.svg";
-import bookmark from "../assets/icon-bookmark.svg";
+// import bookmark from "../assets/icon-bookmark.svg";
 import Modal2 from "./Modal2";
 import { CiBookmark } from "react-icons/ci";
 const Modal = () => {
