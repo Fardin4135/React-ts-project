@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import check from '../assets/icon-check.svg';
 
 interface Modal3Props {
@@ -6,8 +6,7 @@ interface Modal3Props {
   setShow: (show: boolean) => void;
 }
 
-const Modal3: React.FC<Modal3Props> = ({ setOpen, setShow }) => {
-
+const Modal3 = ({ setOpen, setShow }: Modal3Props) => {
   // Hide the previous modal once this modal is rendered
   useEffect(() => {
     setShow(false);

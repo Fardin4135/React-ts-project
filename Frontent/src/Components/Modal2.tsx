@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import modalClose from "../assets/icon-close-modal.svg";
 import Modal3 from "./Modal3";
 
@@ -7,9 +7,9 @@ interface Modal2Props {
 }
 
 const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
-  const [num, setNum] = useState("");
+  const [num, setNum] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(true);
 
@@ -70,6 +70,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
             </p>
 
             <div className="card">
+              {/* Option 1 */}
               <div className={classes3}>
                 <div className="card-item flex gap-3 items-start p-4">
                   <div>
@@ -137,12 +138,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
              [-moz-appearance:textfield]"
                           value={num}
                           min={0}
-                          onChange={(e) => {
-                            const value = e.target.value;
-                            if (Number(value) >= 0 || value === "") {
-                              setNum(value);
-                            }
-                          }}
+                          onChange={(e) => setNum(e.target.value)}
                           ref={inputRef}
                         />
 
@@ -160,7 +156,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
 
               {/* Option 2 */}
               <div className={classes}>
-                <div className="card-item  flex gap-3 p-4">
+                <div className="card-item flex gap-3 p-4">
                   <div>
                     <input
                       type="radio"
@@ -182,20 +178,17 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                   </div>
 
                   <div>
-                    <div className="flex  justify-between ">
-                      <div>
-                        <label htmlFor="option2" className="flex gap-2 ">
-                          <h5 className="cursor-pointer text-[hsl(176,50%,47%)] font-bold text-sm md:text-base 2xl:text-xl">
-                            Bamboo Stand
-                          </h5>
+                    <div className="flex justify-between">
+                      <label htmlFor="option2" className="flex gap-2">
+                        <h5 className="cursor-pointer text-[hsl(176,50%,47%)] font-bold text-sm md:text-base 2xl:text-xl">
+                          Bamboo Stand
+                        </h5>
+                        <h5 className="cursor-pointer text-[hsl(176,50%,47%)] font-bold text-sm md:text-base 2xl:text-xl">
+                          Pledge $25 or more
+                        </h5>
+                      </label>
 
-                          <h5 className="cursor-pointer text-[hsl(176,50%,47%)] font-bold text-sm md:text-base 2xl:text-xl">
-                            Pledge $25 or more
-                          </h5>
-                        </label>
-                      </div>
-
-                      <div className="flex flex-row gap-2  hidden sm:block">
+                      <div className="flex gap-2 items-center hidden sm:block">
                         <h3 className="font-bold text-lg 2xl:text-xl inline pr-2">
                           101
                         </h3>
@@ -204,27 +197,17 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         </p>
                       </div>
                     </div>
-                    <div>
-                      <p className="py-3 text-sm text-gray-500 2xl:text-xl">
-                        Choose to support us without a reward if you simply
-                        believe in our project. As a backer, you will be signed
-                        to receive product updates via email.
-                      </p>
-                    </div>
-                    <div className="flex flex-row items-center gap-2 sm:hidden">
-                      <h3 className="font-bold text-lg">101</h3>
-                      <p className="font-bold text-xs text-gray-400">left</p>
-                    </div>
+                    <p className="py-3 text-sm text-gray-500 2xl:text-xl">
+                      Choose to support us without a reward if you simply
+                      believe in our project. As a backer, you will be signed
+                      to receive product updates via email.
+                    </p>
                   </div>
                 </div>
 
                 {selected === "option2" && (
                   <div className="border-t">
-                    <div
-                      className="flex items-center justify-between p-3 mt-2
-                         flex-wrap gap-3 items-center
-                         "
-                    >
+                    <div className="flex items-center justify-between p-3 mt-2 flex-wrap gap-3 items-center">
                       <p
                         className="text-gray-400 text-sm cursor-pointer"
                         onClick={handlePClick}
@@ -242,12 +225,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
              [-moz-appearance:textfield]"
                           value={num}
                           min={0}
-                          onChange={(e) => {
-                            const value = e.target.value;
-                            if (Number(value) >= 0 || value === "") {
-                              setNum(value);
-                            }
-                          }}
+                          onChange={(e) => setNum(e.target.value)}
                           ref={inputRef}
                         />
 
@@ -265,7 +243,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
 
               {/* Option 3 */}
               <div className={classes2}>
-                <div className="card-item  flex gap-3 items-start p-4">
+                <div className="card-item flex gap-3 items-start p-4">
                   <div>
                     <input
                       type="radio"
@@ -306,27 +284,17 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         </p>
                       </div>
                     </div>
-                    <div>
-                      <p className="py-3 text-sm text-gray-500 2xl:text-xl">
-                        Choose to support us without a reward if you simply
-                        believe in our project. As a backer, you will be signed
-                        to receive product updates via email.
-                      </p>
-                    </div>
-                    <div className="flex flex-row items-center gap-2 sm:hidden">
-                      <h3 className="font-bold text-lg">64</h3>
-                      <p className="font-bold text-xs text-gray-400">left</p>
-                    </div>
+                    <p className="py-3 text-sm text-gray-500 2xl:text-xl">
+                      Choose to support us without a reward if you simply
+                      believe in our project. As a backer, you will be signed
+                      to receive product updates via email.
+                    </p>
                   </div>
                 </div>
 
                 {selected === "option3" && (
                   <div className="border-t">
-                    <div
-                      className="flex items-center justify-between p-3 mt-2
-                         flex-wrap gap-3 items-center
-                         "
-                    >
+                    <div className="flex items-center justify-between p-3 mt-2 flex-wrap gap-3 items-center">
                       <p
                         className="text-gray-400 text-sm cursor-pointer"
                         onClick={handlePClick}
@@ -344,12 +312,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
              [-moz-appearance:textfield]"
                           value={num}
                           min={0}
-                          onChange={(e) => {
-                            const value = e.target.value;
-                            if (Number(value) >= 0 || value === "") {
-                              setNum(value);
-                            }
-                          }}
+                          onChange={(e) => setNum(e.target.value)}
                           ref={inputRef}
                         />
 
