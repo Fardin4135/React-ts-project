@@ -384,7 +384,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
         </div>
       )}
 
-      {open && <Modal3 setOpen={setOpen} setShow={setShow} />}
+      {open && <Modal3 setOpen={setOpen} setShow={setShow} setActive={setActive}  />}
     </div>
   );
 };

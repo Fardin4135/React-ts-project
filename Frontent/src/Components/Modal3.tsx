@@ -4,10 +4,11 @@ import check from '../assets/icon-check.svg';
 interface Modal3Props {
   setOpen: (open: boolean) => void;
   setShow: (show: boolean) => void;
+  setActive: (active: boolean) => void;
 }
 
-const Modal3 = ({ setOpen, setShow }: Modal3Props) => {
-  // Hide the previous modal once this modal is rendered
+const Modal3 = ({ setOpen, setShow, setActive }: Modal3Props) => {
+ 
   useEffect(() => {
     setShow(false);
   }, [setShow]);
@@ -30,7 +31,10 @@ const Modal3 = ({ setOpen, setShow }: Modal3Props) => {
         <div>
           <button 
             className='py-2 px-5 rounded-full text-white bg-[hsl(176,50%,47%)] text-sm' 
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setActive(false)
+              setOpen(false)
+            }}
           >
             Got it!
           </button>

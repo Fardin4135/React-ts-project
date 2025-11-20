@@ -55,9 +55,14 @@ const Modal = () => {
           <div className="flex justify-between items-center w-full my-2  md:py-2 md:pt-4 gap-3">
             <button
               className="text-white text-[0.5rem] sm:text-[0.8rem] w-full md:w-auto md:text-sm lg-text-lg font-bold bg-[hsl(176,50%,47%)] px-2 md:px-6 lg:px-8 rounded-full py-2 md:py-3"
-              onClick={() => {
-                !active ? setActive(true) : setActive(false);
-              }}
+             onClick={() => {
+  setActive(prev => {
+    console.log("before:", prev);
+    console.log("after:", !prev);
+    return !prev;
+  });
+}}
+
             >
               Back this project
             </button>
