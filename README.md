@@ -42,25 +42,10 @@ Copy code
 
 ### 📌 Screenshot 2
 
-<img width="2880" height="3496" alt="react-ts-project-seven vercel app_ (1)" src="https://github.com/user-attachments/assets/52a0ec76-0055-4bba-bf3b-93e899ea368f" />
-
-
-### 📌 Screenshot 3
-
-<img width="2880" height="3496" alt="react-ts-project-seven vercel app_ (2)" src="https://github.com/user-attachments/assets/39d1b539-6d7d-4838-8f5d-6431dfb3c4a1" />
-
-
-### 📌 Screenshot 4
-
-<img width="750" height="3800" alt="react-ts-project-seven vercel app_ (3)" src="https://github.com/user-attachments/assets/f78ac2e3-5d27-460a-847b-a568522c702a" />
-
-
-### 📌 Screenshot 5
-
 <img width="750" height="3800" alt="react-ts-project-seven vercel app_ (4)" src="https://github.com/user-attachments/assets/9e7e40fa-c36d-4cac-9bd9-23be1791c666" />
 
 
-### 📌 Screenshot 6
+### 📌 Screenshot 3
 
 <img width="750" height="3800" alt="react-ts-project-seven vercel app_ (5)" src="https://github.com/user-attachments/assets/e620d2ee-b0bc-42f5-9b8c-43ff1182b0ff" />
 
