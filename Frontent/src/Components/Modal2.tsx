@@ -132,7 +132,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         <input
                           type="number"
                           placeholder="$"
-                          className="outline-none border border-[hsl(176,50%,47%)] rounded-full w-[80px] py-2 px-4 md:py-3 md:px-6 text-xs font-bold cursor-pointer text-xs
+                          className="outline-none border border-[hsl(176,50%,47%)] rounded-full w-[80px] py-2 px-4 md:py-3 md:px-6 text-base font-bold cursor-pointer
              [&::-webkit-outer-spin-button]:appearance-none
              [&::-webkit-inner-spin-button]:appearance-none
              [-moz-appearance:textfield]"
@@ -143,7 +143,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         />
 
                         <button
-                          className="bg-[hsl(176,50%,47%)] text-white rounded-full py-2 px-4  md:py-3 md:px-6 text-xs font-bold"
+                          className="bg-[hsl(176,50%,47%)] text-white rounded-full py-2 px-4  md:py-3 md:px-6 text-base font-bold"
                           onClick={handleClick}
                         >
                           Continue
@@ -219,7 +219,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         <input
                           type="number"
                           placeholder="$"
-                          className="outline-none border border-[hsl(176,50%,47%)] rounded-full w-[80px] py-2 px-4 md:py-3 md:px-6 text-xs font-bold cursor-pointer text-xs
+                          className="outline-none border border-[hsl(176,50%,47%)] rounded-full w-[80px] py-2 px-4 md:py-3 md:px-6 text-base font-bold cursor-pointer
              [&::-webkit-outer-spin-button]:appearance-none
              [&::-webkit-inner-spin-button]:appearance-none
              [-moz-appearance:textfield]"
@@ -230,7 +230,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         />
 
                         <button
-                          className="bg-[hsl(176,50%,47%)] text-white rounded-full py-2 px-4  md:py-3 md:px-6 text-xs font-bold"
+                          className="bg-[hsl(176,50%,47%)] text-white rounded-full py-2 px-4  md:py-3 md:px-6 text-base font-bold"
                           onClick={handleClick}
                         >
                           Continue
@@ -306,7 +306,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         <input
                           type="number"
                           placeholder="$"
-                          className="outline-none border border-[hsl(176,50%,47%)] rounded-full w-[80px] py-2 px-4 md:py-3 md:px-6 text-xs font-bold cursor-pointer text-xs
+                          className="outline-none border border-[hsl(176,50%,47%)] rounded-full w-[80px] py-2 px-4 md:py-3 md:px-6 text-base font-bold cursor-pointer
              [&::-webkit-outer-spin-button]:appearance-none
              [&::-webkit-inner-spin-button]:appearance-none
              [-moz-appearance:textfield]"
@@ -317,7 +317,7 @@ const Modal2: React.FC<Modal2Props> = ({ setActive }) => {
                         />
 
                         <button
-                          className="bg-[hsl(176,50%,47%)] text-white rounded-full py-2 px-4  md:py-3 md:px-6 text-xs font-bold"
+                          className="bg-[hsl(176,50%,47%)] text-white rounded-full py-2 px-4  md:py-3 md:px-6 text-base font-bold"
                           onClick={handleClick}
                         >
                           Continue
